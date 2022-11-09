@@ -10,7 +10,7 @@ import { RootState } from '../features/store';
 
 export default function Home({ navigation }: Props) {
     const tasks = useSelector((state: RootState) => state.todo.todoList)
-    const [task, setTask] = useState<Task>({ id: 0, task: '' });
+    const [task, setTask] = useState<Task>({ id: tasks.length + 1, task: '' });
 
     const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ export default function Home({ navigation }: Props) {
 
     const handleSaveTask = () => {
         dispatch(saveTodo(task))
-        setTask({ id: 0, task: '' });
+        setTask({ id: tasks.length + 1, task: '' });
     }
 
     const newTask = (val: string) => {
@@ -46,6 +46,7 @@ export default function Home({ navigation }: Props) {
     }
 
     const handleChooseTask = (item: Task) => {
+        console.log('item >> ' , item)
         navigation.navigate('ChosenTask', item);
     }
 

@@ -18,7 +18,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   // push notifications
-  registerNNPushToken(4733, 'mxSPIXEpud0NRbIBOk3Ube');
+  // registerNNPushToken(4733, 'mxSPIXEpud0NRbIBOk3Ube');
   // registerNNPushToken(your-app-id, 'your-app-token');
   // get App ID and App Token from NativeNotify.com
 
