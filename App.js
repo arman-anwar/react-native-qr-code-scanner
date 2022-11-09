@@ -10,7 +10,8 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   // push notifications
-  registerNNPushToken(your-app-id, 'your-app-token');
+  registerNNPushToken(4733, 'mxSPIXEpud0NRbIBOk3Ube');
+  // registerNNPushToken(your-app-id, 'your-app-token');
     // get App ID and App Token from NativeNotify.com
 
   // globalstate management
@@ -33,7 +34,7 @@ export default function App() {
           {props => <Home {...props} GlobalState={GlobalState} />}
         </Stack.Screen>
 
-        <Stack.Screen name="ChosenTask" options={{ headerShown: false }}>
+        <Stack.Screen name="ChosenTask"  >
           {props => <ChosenTask {...props} GlobalState={GlobalState} />}
         </Stack.Screen>
 
