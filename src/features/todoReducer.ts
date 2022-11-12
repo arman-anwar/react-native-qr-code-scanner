@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { Task } from '../types';
 
 const initialState = {
-    todoList: <Task[]> []
+    todoList: [] as Task[]
 }
 
 const todoSlice = createSlice({
@@ -11,6 +11,10 @@ const todoSlice = createSlice({
     reducers: {
         saveTodo: (state, action) => {
             let test: Task = action.payload
+            state.todoList.push(test)
+        },
+        addQRCode: (state, action) => {
+            let test: Task = { id: state.todoList.length + 1, task: action.payload }
             state.todoList.push(test)
         },
         setTodos: (state, action) => {
@@ -28,7 +32,7 @@ const todoSlice = createSlice({
     }
 });
 
-export const { saveTodo, delTodo, updateTodo, setTodos } = todoSlice.actions
+export const { saveTodo, delTodo, updateTodo, setTodos, addQRCode } = todoSlice.actions
 
 // export const selectTodoList = state => state.todo.todoList
 

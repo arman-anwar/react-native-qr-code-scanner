@@ -7,10 +7,12 @@ import { Provider } from 'react-redux';
 import Home from './src/screens/Home';
 import ChosenTask from './src/screens/ChosenTask';
 import { store } from './src/features/store';
+import Scanner from './src/Components/Scanner';
 
 type RootStackParamList = {
   Home: undefined;
   ChosenTask: undefined;
+  Scanner:undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -30,6 +32,7 @@ export default function App() {
         <Stack.Navigator>
 
           <Stack.Screen name="Home" options={{ headerShown: false }} component={Home} />
+          <Stack.Screen name="Scanner" component={Scanner} />
 
           <Stack.Screen name="ChosenTask" component={ChosenTask} />
 

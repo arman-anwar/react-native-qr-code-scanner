@@ -7,6 +7,7 @@ import { Props, Task } from '../types';
 import { saveTodo, setTodos } from '../features/todoReducer';
 import { useSelector } from 'react-redux'
 import { RootState } from '../features/store';
+import { Button } from 'react-native-elements';
 
 export default function Home({ navigation }: Props) {
     const tasks = useSelector((state: RootState) => state.todo.todoList)
@@ -67,6 +68,7 @@ export default function Home({ navigation }: Props) {
                 >
                     <Text style={styles.buttonText} >Submit</Text>
                 </TouchableOpacity>
+                <Button title='Scan' onPress={() => navigation.navigate("Scanner")}/>
                 <FlatList
                     data={tasks}
                     renderItem={renderItem}
