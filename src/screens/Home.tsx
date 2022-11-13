@@ -11,7 +11,7 @@ import { ListItem } from "@react-native-material/core";
 import { styles } from './style';
 
 export default function Home({ navigation }: Props) {
-    const tasks = useSelector((state: RootState) => state.qrCode.todoList)
+    const tasks = useSelector((state: RootState) => state.qrCode.qrCodeList)
 
     const renderItem: ListRenderItem<QRCode> = ({ item }) => {
         return (
