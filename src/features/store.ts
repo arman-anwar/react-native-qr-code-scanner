@@ -1,9 +1,9 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import todoReducer from './todoReducer';
+import qrCodeReducer from './qrcodeReducer';
 
 export const store = configureStore({
   reducer: {
-    todo: todoReducer,
+    qrCode: qrCodeReducer,
   },
 });
 

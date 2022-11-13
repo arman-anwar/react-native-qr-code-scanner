@@ -4,5 +4,5 @@ export type Props = {
     route?:any;
 }
 
-export interface Task { id: number, task: string }
+export interface QRCode { id: number, code: string }
 
