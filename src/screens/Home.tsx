@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
 import { FlatList, ListRenderItem, View } from 'react-native';
-import { useDispatch } from 'react-redux';
 import Header from '../Components/Header';
 import { Props, QRCode } from '../types';
-// import { saveTodo, setTodos } from '../features/todoReducer';
 import { useSelector } from 'react-redux'
 import { RootState } from '../features/store';
-import { Button, Text, TextInput } from "@react-native-material/core";
+import { Button, Text } from "@react-native-material/core";
 import { ListItem } from "@react-native-material/core";
 import { styles } from './style';
 

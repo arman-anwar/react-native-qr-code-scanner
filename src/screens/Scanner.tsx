@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button, Text, TextInput } from "@react-native-material/core";
+import { Button, Text } from "@react-native-material/core";
 import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner';
 import { useDispatch } from 'react-redux';
 import { Props } from '../types';

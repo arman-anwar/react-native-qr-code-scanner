@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-to-do-list",
-    "slug": "my-to-do-list",
+    "name": "QR Code Scanner",
+    "slug": "qr-code-scanner",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,21 +19,22 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.pagecow.mytodolist"
+      "bundleIdentifier": "com.insignia.qrcodescanner"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.pagecow.mytodolist"
+      "package": "com.insignia.qrcodescanner",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "b71e9b26-d748-4b94-8027-72747785315d"
+        "projectId": "316ed702-b9c0-4cbc-8574-d9cafc85b268"
       }
     }
   }
