@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { Props } from '../types';
 import { addQRCode } from '../features/qrcodeReducer';
 import { styles } from './style';
+import apiClient from '../util/apiClient';
 
 export default function Scanner({ navigation }: Props) {
     const [hasPermission, setHasPermission] = useState(false);
@@ -30,9 +31,18 @@ export default function Scanner({ navigation }: Props) {
     };
 
 
-    const handleSaveQR = () => {
+    const handleSaveQR = async () => {
         // console.log(qrcode)
         dispatch(addQRCode(qrcode))
+        let a = await apiClient.post(`qrcodes`, {
+            qrcode: qrcode,
+        }).then(function (response) {
+            console.log('response >> ' , response.data);
+        })
+            .catch(function (error) {
+                console.log('error >> ', error);
+            });
+
         navigation.goBack();
     };
 
